@@ -1,0 +1,7 @@
+/* macOS overlay titlebar / traffic-light inset ergonomics */
+@supports (-webkit-touch-callout: none) {
+  .macos-titlebar-drag {
+    -webkit-app-region: drag;
+    padding-left: 72px;
+  }
+}

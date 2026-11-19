@@ -1,0 +1,25 @@
+[package]
+name = "gitupload-github"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "GitHub REST & GraphQL API Client: Orgs, PRs, Branch Protection, Actions, and Issues"
+
+[dependencies]
+gitupload-core.workspace = true
+gitupload-security.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+url.workspace = true
+secrecy.workspace = true
+chrono.workspace = true
+regex.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+wiremock.workspace = true
+tempfile.workspace = true

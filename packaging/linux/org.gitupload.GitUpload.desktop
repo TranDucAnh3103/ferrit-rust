@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GitUpload
+GenericName=Git Desktop Client
+Comment=GitHub-Fidelity Git Automation & Productivity Suite
+Exec=gitupload-app %U
+Icon=org.gitupload.GitUpload
+Terminal=false
+Type=Application
+Categories=Development;RevisionControl;IDE;
+MimeType=x-scheme-handler/gitupload;inode/directory;
+Keywords=git;github;vcs;upload;code;
+StartupWMClass=gitupload-app

@@ -1,0 +1,37 @@
+[package]
+name = "gitupload-cli"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "High-performance headless companion CLI tool for GitUpload"
+
+[[bin]]
+name = "gitupload"
+path = "src/main.rs"
+
+[dependencies]
+gitupload-core.workspace = true
+gitupload-security.workspace = true
+gitupload-storage.workspace = true
+gitupload-plugins.workspace = true
+git2.workspace = true
+directories.workspace = true
+clap.workspace = true
+clap_complete.workspace = true
+colored.workspace = true
+indicatif.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+criterion.workspace = true
+
+[[bench]]
+name = "cli_latency"
+harness = false

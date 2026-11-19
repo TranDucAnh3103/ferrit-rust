@@ -1,0 +1,31 @@
+[package]
+name = "gitupload-git"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Dual-Engine Git Core with libgit2 In-Process, Interactive DAG Graph Revwalk, LFS & Safe Sync"
+
+[dependencies]
+gitupload-core.workspace = true
+gitupload-security.workspace = true
+git2.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+async-trait.workspace = true
+secrecy.workspace = true
+tempfile.workspace = true
+windows-sys.workspace = true
+thiserror.workspace = true
+regex.workspace = true
+chrono.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bench]]
+name = "bench_dag_revwalk"
+harness = false

@@ -1,0 +1,26 @@
+[package]
+name = "gitupload-ghcli"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "GitHub CLI (gh) Full Lifecycle Manager: Detection, Sandbox Auto-Installer, Checksum Verification & Dual-Auth Bridge"
+
+[dependencies]
+gitupload-core.workspace = true
+gitupload-security.workspace = true
+tokio.workspace = true
+reqwest.workspace = true
+zip.workspace = true
+sha2.workspace = true
+hex.workspace = true
+directories.workspace = true
+secrecy.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+wiremock.workspace = true

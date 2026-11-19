@@ -1,0 +1,25 @@
+[package]
+name = "gitupload-plugins"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "WebAssembly Plugin Sandbox, Capability Gateway, and Package Installer for GitUpload"
+
+[dependencies]
+gitupload-core.workspace = true
+wasmtime.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+tracing.workspace = true
+sha2.workspace = true
+hex.workspace = true
+ed25519-dalek.workspace = true
+flate2.workspace = true
+tar.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

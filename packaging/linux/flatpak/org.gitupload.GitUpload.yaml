@@ -1,0 +1,23 @@
+app-id: org.gitupload.GitUpload
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: gitupload-app
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --filesystem=host:ro
+  - --filesystem=home
+  - --talk-name=org.freedesktop.secrets
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+modules:
+  - name: gitupload
+    buildsystem: simple
+    build-commands:
+      - cargo build --release --offline -p gitupload-app
+      - install -Dm755 target/release/gitupload-app /app/bin/gitupload-app
+      - install -Dm644 packaging/linux/org.gitupload.GitUpload.desktop /app/share/applications/org.gitupload.GitUpload.desktop
+      - install -Dm644 crates/gitupload-app/icons/128x128.png /app/share/icons/hicolor/128x128/apps/org.gitupload.GitUpload.png

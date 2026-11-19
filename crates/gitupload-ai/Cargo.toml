@@ -1,0 +1,25 @@
+[package]
+name = "gitupload-ai"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pure Cloud AI Engine for GitUpload (Gemini 2.0/1.5, GPT-4o, Claude 3.5 Sonnet, Groq, OpenRouter)"
+
+[dependencies]
+gitupload-core.workspace = true
+gitupload-security.workspace = true
+reqwest.workspace = true
+eventsource-stream.workspace = true
+futures.workspace = true
+tokio.workspace = true
+secrecy.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+regex.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+
+[dev-dependencies]
+wiremock.workspace = true

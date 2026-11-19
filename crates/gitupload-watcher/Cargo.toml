@@ -1,0 +1,23 @@
+[package]
+name = "gitupload-watcher"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Filesystem Notification and Debounced Auto-sync Queue for GitUpload"
+
+[dependencies]
+gitupload-core.workspace = true
+notify.workspace = true
+notify-debouncer-mini.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows-sys.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
